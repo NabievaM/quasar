@@ -1,6 +1,7 @@
 {
   "name": "store-finder-quasar",
   "version": "0.0.1",
+  "type": "module",
   "description": "A Quasar Project",
   "productName": "Quasar App",
   "author": "",
@@ -10,23 +11,33 @@
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "build": "VITE_CJS_TRACE=true vite build"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
-    "quasar": "^2.16.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/server-renderer": "^3.5.12",
+    "axios": "^1.7.7",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "js-cookie": "^3.0.5",
+    "pinia": "^2.2.6",
+    "quasar": "^2.17.1",
     "vue": "^3.4.18",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@quasar/app-vite": "^1.10.2",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.18.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.0.0",
-    "vite-plugin-checker": "^0.8.0",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.47",
     "prettier": "^2.5.1",
-    "@quasar/app-vite": "^1.9.0",
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.14"
+    "tailwindcss": "^3.4.14",
+    "vite-plugin-checker": "^0.8.0"
   },
   "engines": {
     "node": "^20 || ^18 || ^16",
